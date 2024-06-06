@@ -102,12 +102,14 @@ float func(LList* l){
     return min;
 }
 
-int main(int argc, char** argv){
+int main(){
     LList* l = (LList *)malloc(sizeof(LList)); 
     append(l, 1);
     append(l, 2);
     append(l, 3);
     append(l, 4);
+    print(l);
+    delete(l, 3);
     print(l);
     float m = mean(l);
     printf("%f\n", m);
